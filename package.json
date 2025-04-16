@@ -1,0 +1,9 @@
+{
+  "name": "scraper",           
+  "version": "1.0.0",          
+  "description": "Scrapes a website and saves data",
+  "main": "scrape.js",         
+  "dependencies": {
+    "puppeteer": "^21.3.8"     
+  }
+}
