@@ -2,10 +2,10 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 (async () => {
-    const url = process.env.SCRAPE_URL || 'https://www.example.com';  // Default to example.com if not set
+    const url =  'https://www.example.com';  // Default to example.com if not set
     console.log('Scraping URL:', url);
 
-    const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+    const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium',headless: true, args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto(url);
 

@@ -8,6 +8,9 @@ WORKDIR /app
 
 # Install Node.js dependencies
 COPY package.json ./
+# Install Puppeteer without downloading Chromium
+ENV PUPPETEER_SKIP_DOWNLOAD=true
+
 RUN npm install
 
 # Copy scraper script
